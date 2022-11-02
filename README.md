@@ -37,7 +37,7 @@ i.e.
 
 
 #### My pull request link :
-- https://github.com/BayanBushnaq/web-scraper/pull/1
+- [My pull request](https://github.com/BayanBushnaq/web-scraper/pull/2)
 
 
 
