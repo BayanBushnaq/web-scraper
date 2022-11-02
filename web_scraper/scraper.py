@@ -1,11 +1,17 @@
 import requests
 from bs4 import BeautifulSoup
 
+
+
 def get_citations_needed_count(url):
     page = requests.get(url)
     soup = BeautifulSoup(page.content,'html.parser')
     all = soup.find_all('a',title="Wikipedia:Citation needed")
     return len(all)
+
+
+
+
 
 
 
@@ -18,6 +24,9 @@ def get_citations_needed_report(url):
         if a.find('a',title="Wikipedia:Citation needed"):
             report.append(a.text.strip())
     return report
+
+
+
 
 
 if __name__ == "__main__":
