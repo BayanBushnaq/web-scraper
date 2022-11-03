@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 
 
 def get_citations_needed_count(url):
+    ''' This function return the number of [citation needed] in the whole html page'''
     page = requests.get(url)
     soup = BeautifulSoup(page.content,'html.parser')
     all = soup.find_all('a',title="Wikipedia:Citation needed")
@@ -16,6 +17,7 @@ def get_citations_needed_count(url):
 
 
 def get_citations_needed_report(url):
+    ''' This function return a paragraph that contain a [citation needed] in html page'''
     page = requests.get(url)
     soup = BeautifulSoup(page.content,'html.parser')
     par = soup.find_all('p')
